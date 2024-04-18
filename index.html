@@ -1,170 +1,228 @@
-
 <html>
 <head>
-<meta charset=UTF-8>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />  
+<!-- <script>
+alert("天蓬元帥")
+alert ("給我")
+alert ("8個")
+alert ("聖杯")
+</script> -->
 <style>
 
-.text-frame {
-  background-color: #ffffff;
-  color: 000000;
-  max-width: 100%;
-  overflow-x: auto;
-  padding: 22px;
-  font-family: Arial, sans-serif;
-  font-size: 26px;
-  line-height: 1;
-  width: 100%;
-  height: 1790px;
+body { background: url('https://firebasestorage.googleapis.com/v0/b/ace-mission-379007.appspot.com/o/htm%2Fpexels-photo-3565742.jpeg?alt=media&token=616f1295-9404-4a5d-a20a-aa1020d8ea26');
 }
+    .tab-container {
+      width: 100%;
+    }
 
-      .button {
-      display: inline-block;
-      padding: 10px 20px;
+    .tab-links {
+      display: flex;
+    }
+
+    .tab-link {
+      flex: 1;
+      padding: 8px;
+      background-color: #ffd019;
       border: none;
-      background-color: #00008B;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      font-size: 28px;
-      transition-duration: 1s;
       cursor: pointer;
-      border-radius: 4px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
-      height: 58px; 
-      width: 999px; 
     }
 
-    .button:hover {
-      background-color: #FFFFFF;
+    .tab-content {
+      display: none;
     }
 
-#caselist{position:absolute;right:5px;top:45px;z-index:14;background-color:rgba(0,0,0,0.821);padding:5px;font-size:24px;user-select:text;color:#fff;font-family:"微軟正黑體";border:2px solid #ffffff;border-radius:5px;box-shadow:3px 3px 0px #545454;word-wrap:break-word;padding-right:10px;transition:margin-right 0.5s;}
-.tableBox{overflow-y:auto;width:250px;height:30vh;}
-#caseListTable{z-index:10;}
-#caseListTable td{border-bottom:1px solid rgb(255,255,255)}
-#caseListTable td:hover{background-color:#fff;color:black;cursor:pointer;}
-.collapseBtn{position:absolute;left:-36px;width:35px;height:55px;background:rgba(31,31,31,0.713);top:5px;z-index:9;cursor:pointer;}
-   
-#caseListTable {
-			transform: rotate(180deg);
-			-ms-transform: rotate(180deg); /* IE 9 */
-			-webkit-transform: rotate(180deg); /* Safari and Chrome */
-			direction: rtl;
-		}
-		#caseListTable td, #caseListTable th {
-			transform: rotate(-180deg);
-			-ms-transform: rotate(-180deg); /* IE 9 */
-			-webkit-transform: rotate(-180deg); /* Safari and Chrome */
-			direction: ltr;
-		}
+    .tab-content iframe {
+      width: 100%;
+      height: 1800px;
+      border: none;
+    }
 
-#caseListTable {
-  font-size: 16px;
-  color: #FFFFFF; /* 更改文字顏色 */
-  background-color: #000000; /* 更改表格底色 */
+    #logFrame  {
+  /*background: linear-gradient(45deg, #ff0000, #ff0000, #ff0000, #ff0000, #ffffff, #ffffff, #ffffff, #ff0000, #ff0000);*/
+ background-size: 600% 100%;
+  position: absolute;
+   border-radius: 1%;
+   cursor: pointer;
+   animation: rainbow 1.4s linear infinite;
+  width: 100%;
+  height: 1820px;
+  overflow-y: scroll;
+  border: 22px;
+      overflow-y: scroll;
+      margin-top: 20px;
+      padding: 20px;
+  
 }
 
-#caseListTable th {
-  background-color: #4AB28D;
-  color: white;
-  font-size: 25.5px;
-  font-weight: bold;
+        @keyframes rainbow {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+#audioPlayer {
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+  
+#playButton {
+background: linear-gradient(45deg, #ff0000, #ff0000, #ff0000, #ffffff, #ffffff, #ffffff, #ffffff, #ff0000, #ffffff);
+background-size: 600% 100%;
+  position: absolute;
+   border-radius: 1%;
+   cursor: pointer;
+   animation: rainbow 10s linear infinite;
+  position: absolute;
+  top: 900px;
+  left: 600px;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/ace-mission-379007.appspot.com/o/htm%2Fvideoplay.png?alt=media&token=222561cc-90a3-426c-af4d-b5cb45bb851e");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  outline: none;
+  border-radius: 100%; 
 }
 
-#caseListTable td {
-  font-size: 23.8px; /* 更改表格內容文字大小 */
-  padding: 10px;
-  border-bottom: 2px solid #bbb;
-}
-
-#dataTable {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    border:2px solid #7BBEAB;
-}
-
-#dataTable td, #dataTable th {
-    border-left:1px solid #FF0000
-    border-bottom:1px solid #ECDDDA;
-    padding: 8px;
-    text-align: center;
-}
-
-#dataTable tr:nth-child(odd){background-color: #ffeedf;}
-
-#dataTable tr:hover {background-color: #ddd;}
-
-#dataTable th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: #4AB28D;
-    color: white;
-}
-</style>
+    @keyframes rainbow {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+  </style>
+<!--<img src="https://firebasestorage.googleapis.com/v0/b/wide-retina-407121.appspot.com/o/shell%2FKcg%2FIu%2FGIF_20240401181559579.gif?alt=media&token=ef8ece25-4ed1-4972-8b9b-358957d7ddeb" height="250" width="967" 
+</center> -->
 </head>
 <body>
- <button id="homeButton" class="button">ON/OFF</button>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <div id="content" class="text-frame">
-    <table id="caseListTable">
-         <thead>
-        <tr>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-  </div>
-   <script>
-    $(document).ready(function () {
-      const apiUrl1 = 'https://gis.hcfd.gov.tw/rescue/getnowcase/json?getalls=1&hr=24';
-      function updateData() {
-        $.getJSON(apiUrl1, function (data) {
-          console.log(data);
-          $('#caseListTable tbody').empty();
-          $.each(data.csno, function (i, item) {
-            var tr = $('<tr>').append(
-              $('<td>').text(item),
-              $('<td>').text(data.dis_code[i]),
-              $('<td>').text(data.nt_name[i]),
-              $('<td>').text(data.nt_tel[i]),
-              $('<td>').text(data.dept[i]),
-              $('<td>').text(data.cs_place[i]),
-              $('<td>').text(data.in_time[i]),
-              $('<td>').text(data.memo[i]),
-              $('<td>').text(data.dis_code_case[i])
-            );
-            $('#caseListTable tbody').append(tr);
-          });
-        }).fail(function (error) {
-          console.log(error);
-          alert('请求数据失败');
-        });
+
+<div id="audioPlayer">
+ <audio id="myAudio" loop>
+</audio>
+  <button id="playButton"></button>
+</div>
+
+<script>
+
+var audioPlayer = document.getElementById("audioPlayer");
+var audio = document.getElementById("myAudio");
+var playButton = document.getElementById("playButton");
+var isDragging = false;
+var initialX = 0;
+var initialY = 0;
+
+var audioFiles = [
+  "https://firebasestorage.googleapis.com/v0/b/ace-mission-379007.appspot.com/o/htm%2F4.mp3?alt=media&token=80b407e5-d7bb-4bb1-8d37-5ad8d382d59d",
+  "https://firebasestorage.googleapis.com/v0/b/wide-retina-407121.appspot.com/o/car%2F%E5%B8%8C%E6%9C%9B%E4%BD%A0.mp3?alt=media&token=5df8a133-210a-4a00-801e-e788a48f8e3a",
+  "https://example.com/audio3.mp3"
+];
+
+var currentAudioIndex = 0;
+
+audio.src = audioFiles[currentAudioIndex];
+
+playButton.addEventListener("click", function() {
+  if (audio.paused) {
+    audio.play();
+    playButton.textContent = "";
+  } else {
+    audio.pause();
+    playButton.textContent = "";
+  }
+});
+
+audio.addEventListener("ended", function() {
+  currentAudioIndex = (currentAudioIndex + 1) % audioFiles.length;
+  audio.src = audioFiles[currentAudioIndex];
+  audio.play();
+});
+
+playButton.addEventListener("touchstart", function(event) {
+  isDragging = true;
+  initialX = event.touches[0].clientX - audioPlayer.offsetLeft;
+  initialY = event.touches[0].clientY - audioPlayer.offsetTop;
+});
+
+playButton.addEventListener("touchmove", function(event) {
+  if (isDragging) {
+    event.preventDefault();
+    var offsetX = event.touches[0].clientX - initialX;
+    var offsetY = event.touches[0].clientY - initialY;
+    audioPlayer.style.left = offsetX + "px";
+    audioPlayer.style.top = offsetY + "px";
+  }
+});
+</script>
+ 
+  <script>
+    function openTab(event, tabName) {
+      var i, tabContent, tabLinks;
+
+      tabContent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
       }
 
-      $('#homeButton').click(function () {
-        $('#content').show();
-        updateData();
-        setInterval(updateData, 15000);
-         clearInterval();
-        });
-      $('#page2Button').click(function () {
-        window.location.href = '';
-      });
-      });
+      tabLinks = document.getElementsByClassName("tab-link");
+      for (i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+      }
+
+      document.getElementById(tabName).style.display = "block";
+      event.currentTarget.className += " active";
+    }
   </script>
+
+  <div class="tab-container">
+    <div class="tab-links">
+      
+<button class="tab-link" onclick="openTab(event, 'page1')">1</button>
+      
+
+<button class="tab-link" onclick="openTab(event, 'page2')">2</button>
+      
+
+<button class="tab-link" onclick="openTab(event, 'page3')">3</button>
+
+<button class="tab-link" onclick="openTab(event, 'page4')">4</button>
+
+      
+
+</div>
+    
+<div id="page1" class="tab-content">
+<iframe src="https://firebasestorage.googleapis.com/v0/b/ace-mission-379007.appspot.com/o/htm%2F%E5%A4%960.html?alt=media&token=e497efc1-bc1a-4639-81e8-d731ef2cdb44">
+</iframe>
+</div>
+
+    
+<div id="page2" class="tab-content">
+<iframe src="https://firebasestorage.googleapis.com/v0/b/ace-mission-379007.appspot.com/o/htm%2F%E5%A4%961.html?alt=media&token=47e42cc1-8f5a-4c47-b130-3dfdad0f4b69">
+</iframe>
+</div>
+
+<div id="page3" class="tab-content">     
+<iframe src="https://firebasestorage.googleapis.com/v0/b/ace-mission-379007.appspot.com/o/htm%2F%E5%A4%962.html?alt=media&token=11e7a65e-1958-4165-afc1-751e9c074da0">
+</iframe>    
+</div>
+
+<div id="page4" class="tab-content">     
+<iframe src="https://firebasestorage.googleapis.com/v0/b/ace-mission-379007.appspot.com/o/htm%2F%E5%A4%963.html?alt=media&token=c35c0958-6702-4d80-8453-4728a6f09f6a">
+</iframe>    
+</div>
+
+    
+
+</div>
 </body>
 </html>
